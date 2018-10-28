@@ -1,0 +1,57 @@
+<div class="container">
+
+  <div class="col-md-6">
+     <h1>Add new category</h1>
+      <form (ngSubmit)="submitCategory(c.value)" #c="ngForm">
+          <input (ngModel)="this.title" type="text" class="form-control" name="title" placeholder="Create category">
+          <input (ngModel)="this.description" type="text" class="form-control" name="description" placeholder="Add category description">
+          <input type="submit" class="btn btn-primary" value="Add category">
+      </form>
+
+    <form (ngSubmit)="submitItem(f.value)" #f="ngForm">
+      <h1>Add new product</h1>
+
+      <input [(ngModel)]="this.title" type="text" class="form-control" name="title" placeholder="Add title"><br>
+
+      <textarea class="form-control" [(ngModel)]="this.description" name="description" id="description" placeholder="Add description"
+        required>
+      </textarea><br>
+
+      <label for="category">Kategoria</label>
+      <select name="category" (ngModel)="category" >
+        <option value="">--valitse--</option>
+        <option value="Juustokakut">Juustokakut</option>
+        <option value="Täytekakut">Täytekakut</option>
+        <option value="Kuumat juomat">Kuumat juomat</option>
+        <option value="Jäätelöt">Jäätelöt</option>
+        <option value="Kylmät juomat">Kylmät juomat</option>
+        <option value="Voileivät">Voileivät</option>
+      </select><br><br>
+
+
+      <label for="image">Upload image:</label>
+
+      <input type="file" class="form-control" name="image" accept="image/*" (change)="readUrl($event)">
+    <br>
+      <input [(ngModel)]="this.price" type="number" class="form-control" name="price" placeholder="Add price">
+
+      <hr>
+      <input type="submit" class="btn btn-primary" value="Add product" [disabled]="f.invalid">
+    </form>
+  </div>
+
+  <!-- ==================================================================================== -->
+
+  <div class="col-md-6">
+    <h1>Preview</h1>
+    <hr>
+
+    <h1 class="help-block"> {{ title }} </h1>
+    <img [src]="url">
+    <hr>
+
+    Kuvaus:<strong> {{ description }} </strong><br>
+
+    Hinta: <strong> {{ price }} </strong>
+  </div>
+</div>
