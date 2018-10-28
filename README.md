@@ -1,27 +1,16 @@
-# AdminpaneeliUusi
+WARNING
+-
+this code is just a MVP and completely untouched since November 2017. So it is deprecated, dangerous and ugly. It contains hardcoded stuff, mixed English and Finnish language
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.5.
+Background:
+- 
+In Business Information Systems studies in Jyväskylä University of Applied Sciences there is a software development course in second year named Ticorporate, which simulates a real software corporation and lasts a whole year. In Ticorporate students create own app or game in small teams using agile scrum.
 
-## Development server
+In 2017 fall I was in team, whose project was a small product management app for different stores and restaurants. Front end was made with Ionic, and backend was done with Angular and MongoDB. My task was to create an MVP admin page with Angular. Because I had not any earlier experience with Angular, the beginning of fall (Sep-Oct) was learning of Angular, and this code was done mainly in beginning November. Because it was decided not to continue developing the app, and I was on this course only the fall season, this code is completely untouched since then. So it is deprecated, dangerous and ugly. But still it is my first real touch with Angular.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Missing features:
+- 
+* feedback when adding new product to database has succeeded/unsucceeded
+* editing of existing categories and products
+* list view of existing things
+* deletion of product or category
